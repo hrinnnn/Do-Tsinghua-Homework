@@ -18,7 +18,7 @@ class InstallationTest(unittest.TestCase):
                 self.assertEqual(installer.files(dest / name), installer.files(ROOT / 'skills' / name))
             installer.install(dest, installer.SKILLS)
             self.assertFalse((dest.parent / 'skill-backups').exists())
-            self.assertTrue((dest / 'writer-tsinghua-report' / '..' / 'do-tsinghua-homework' / 'SKILL.md').is_file())
+            self.assertTrue((dest / 'do-tsinghua-homework' / 'SKILL.md').is_file())
 
     def test_existing_edits_are_protected_then_backed_up(self):
         with tempfile.TemporaryDirectory() as tmp:

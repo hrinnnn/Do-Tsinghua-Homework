@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Install these skills into a chosen Codex skill directory on any OS."""
+"""Install the Do Tsinghua Homework skill into a Codex skill directory."""
 import argparse
 from datetime import datetime, timezone
 import hashlib
@@ -9,7 +9,7 @@ import shutil
 import tempfile
 
 ROOT = Path(__file__).resolve().parents[1]
-SKILLS = ('do-tsinghua-homework', 'markdown-report-pdf', 'writer-tsinghua-report')
+SKILLS = ('do-tsinghua-homework',)
 
 
 def files(directory):

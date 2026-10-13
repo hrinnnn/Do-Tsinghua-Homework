@@ -1,6 +1,6 @@
 ---
 name: do-tsinghua-homework
-description: 按用户个人风格完成中文课程作业、实验报告、代码阅读报告及思考题，结合题目、实际代码和真实结果，先交付可修改的 Markdown 报告，用户确认后再导出 PDF。用户提到 Do Tsinghua Homework、Writer 清华 Report，或要求按这一流程完成课程作业时使用。
+description: 按用户个人风格完成中文课程作业、实验报告、代码阅读报告及思考题，结合题目、实际代码和真实结果，先交付可修改的 Markdown 报告，用户确认后再导出 PDF。用户提到 Do Tsinghua Homework，或要求按这一流程完成课程作业时使用。
 ---
 
 # Do Tsinghua Homework

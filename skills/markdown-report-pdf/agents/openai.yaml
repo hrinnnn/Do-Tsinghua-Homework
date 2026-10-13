@@ -1,4 +1,0 @@
-interface:
-  display_name: "Markdown 报告导出 PDF"
-  short_description: "复用宋体正文、黑体标题与图片等比排版，快速导出中文 Markdown 报告"
-  default_prompt: "使用 $markdown-report-pdf 将我最新保存的 Markdown 报告导出为 PDF，保留正文和图片并检查排版。"

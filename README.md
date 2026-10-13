@@ -1,16 +1,10 @@
-# Codex Personal Skills
+# Do Tsinghua Homework
 
-个人 Codex 技能库，用来在多台电脑复用课程作业写作流程和 Markdown 报告排版。采用 MIT 开源许可证。
+这是一个只发布 **Do Tsinghua Homework** 的 Codex skill 项目，用来完成课程作业、实验实现和报告。它按当前题目、已有代码和真实实验结果开展工作；中文报告采用自然简洁的学生作业表达，少用套话和模板化提醒。代码沿用作业结构和命名，围绕题目补齐必要实现。采用 MIT 开源许可证。
 
-| Skill | 用途 |
-| --- | --- |
-| [do-tsinghua-homework](skills/do-tsinghua-homework/SKILL.md) | 完成课程作业、实现和真实实验，先交付可编辑的 Markdown，修改确认后再转 PDF |
-| [markdown-report-pdf](skills/markdown-report-pdf/SKILL.md) | 将最新 Markdown 导出为 PDF，嵌入中文字体、保留图片比例并检查分页 |
-| [writer-tsinghua-report](skills/writer-tsinghua-report/SKILL.md) | 旧名称的兼容入口，沿用 Do Tsinghua Homework 的完整流程 |
+这是个人工作流程和写作偏好，不是清华大学的统一报告格式。作业内容、实现范围和提交要求以当前题目为准。
 
-这是个人写作偏好，不是清华大学的统一报告格式。作业内容、实现范围和提交要求以当前题目为准。
-
-## 独立场景：课程作业、实验和报告
+## 使用场景：完成课程作业、实验和报告
 
 `do-tsinghua-homework` 面向需要同时处理题目、代码和报告的课程作业。它先读作业要求和现有文件，再按题目完成实现与真实运行，把报告写成自然、简洁、像学生本人整理的表达：少用套话和模板化提醒，直接解释做了什么、代码怎样工作、实验得到了什么结果。代码沿用作业已有结构和命名，围绕要求补齐必要实现，并用实际运行结果支撑报告，不编造代码行为或实验数据。
 
@@ -51,21 +45,13 @@ python3 scripts/install.py --replace
 
 本仓库提供按需同步方式，更新需要在各电脑执行。安装仅复制技能文件，导出依赖另行配置。
 
-也可以在 Codex 中直接请求：
-
-> 安装 https://github.com/hrinnnn/codex-personal-skills 中 skills 目录下的三个技能。
-
-## 使用
+## 在 Codex 中调用
 
 ```text
 使用 $do-tsinghua-homework 帮我完成这个作业，先给 Markdown 报告。
 ```
 
 默认流程：完成题目所需工作 → 保存并交付 .md → 用户修改确认 → 按最新 .md 导出 PDF。第一版不会自动跳过确认环节。用户明确请求把现有 Markdown 转成 PDF 时，可以直接进入导出阶段。
-
-```text
-使用 $markdown-report-pdf 将我最新保存的 Report.md 转成 PDF。
-```
 
 ## PDF 导出环境
 
@@ -74,7 +60,7 @@ python3 scripts/install.py --replace
 ```sh
 python3 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
-.venv/bin/python skills/markdown-report-pdf/scripts/export_pdf.py Report.md Report.pdf --render-dir tmp/preview
+.venv/bin/python skills/do-tsinghua-homework/scripts/export_pdf.py Report.md Report.pdf --render-dir tmp/preview
 ```
 
 Windows 对应命令：
@@ -89,7 +75,7 @@ Mac 默认使用系统宋体、黑体和 Times New Roman，字体嵌入 PDF。�
 Windows 可以显式指定本机字体：
 
 ```powershell
-.venv\Scripts\python skills/markdown-report-pdf/scripts/export_pdf.py Report.md Report.pdf --chinese-font "C:/Windows/Fonts/simsun.ttc" --chinese-index 0 --heading-font "C:/Windows/Fonts/simhei.ttf" --heading-index 0 --latin-font "C:/Windows/Fonts/times.ttf" --latin-bold "C:/Windows/Fonts/timesbd.ttf" --render-dir tmp/preview
+.venv\Scripts\python skills/do-tsinghua-homework/scripts/export_pdf.py Report.md Report.pdf --chinese-font "C:/Windows/Fonts/simsun.ttc" --chinese-index 0 --heading-font "C:/Windows/Fonts/simhei.ttf" --heading-index 0 --latin-font "C:/Windows/Fonts/times.ttf" --latin-bold "C:/Windows/Fonts/timesbd.ttf" --render-dir tmp/preview
 ```
 
 以上字体需在本机实际存在。Linux 或其他字体配置的电脑，使用 --chinese-font、--heading-font、--latin-font、--latin-bold 指定可用的字体；TTC 的子字体通过 --chinese-index、--heading-index 选择。需要粗体时可另加 --chinese-bold。选择含所需中文字形的 TrueType 字体，具体参数见脚本 --help。字体不存在或缺字时会明确报错。
