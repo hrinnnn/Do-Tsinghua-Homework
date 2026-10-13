@@ -1,0 +1,4 @@
+interface:
+  display_name: "Do Tsinghua Homework"
+  short_description: "按个人风格完成课程作业，先交付可修改的 Markdown，确认后再导出 PDF"
+  default_prompt: "使用 $do-tsinghua-homework 完成这份课程作业，先给我可修改的 Markdown 报告，等我确认后再转成 PDF。"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Writer 清华 Report"
+  short_description: "课程报告写作的兼容入口，先交付 Markdown，确认后再导出 PDF"
+  default_prompt: "使用 $writer-tsinghua-report，按我的写作风格完成课程报告，先给我可修改的 Markdown，等我确认后再导出 PDF。"
