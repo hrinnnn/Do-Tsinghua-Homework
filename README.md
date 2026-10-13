@@ -86,6 +86,6 @@ Windows 可以显式指定本机字体：
 
 ## 维护
 
-新增 skill 放在 skills/<skill-name>/，至少包含 SKILL.md；所需脚本、参考材料和界面元数据放入该技能目录。发布前检查相对链接、脚本和公共内容。
+新增 skill 放在 `skills/<skill-name>/`，至少包含 SKILL.md；所需脚本、参考材料和界面元数据放入该技能目录。发布前检查相对链接、脚本和公共内容。
 
 [官方 Skills 文档](https://learn.chatgpt.com/docs/build-skills)
